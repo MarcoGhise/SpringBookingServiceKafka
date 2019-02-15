@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+    <table style="width:600px; font-family: Verdana; font-size: 14px">
+    <tr>
+        <td align="center" colspan="2" style="background-color: #d0f1d3; font-weight: bold;"><img src="http://icons.iconarchive.com/icons/icons8/ios7/256/Transport-Airplane-Take-Off-icon.png" width="30" height="30" align="bottom"/>Airline - BoardingPass </td>
+    </tr>
+    <tr>
+        <td align="center" colspan="2"></td>
+    </tr>
+    <tr>
+        <td style="font-weight: bold" >Passenger</td><td style="font-weight: bold" >Ticket Code</td>
+    </tr>
+    <tr>
+        <td th:text="${name + ' ' + surname}">Test</td><td th:text="${code}">Destination2</td>
+    </tr>
+        <tr>
+        <td align="center" colspan="2"></td>
+    </tr>    
+    <tr>
+        <td style="font-weight: bold" >Flight Number</td><td style="font-weight: bold" >Seat</td>
+    </tr>
+    <tr>
+        <td th:text="${flightNumber}">Test</td><td th:text="${seat}">Destination2</td>
+    </tr>
+    <tr>
+        <td align="center" colspan="2" style="background-color: #d0f1d3; font-weight: bold;">&nbsp;</td>
+    </tr>
+    
+</table>
+</body>
+</html>

@@ -1,0 +1,32 @@
+server:
+  port: 3333 
+spring:  
+  application:
+    name: booking-mvc
+  cloud:
+    stream:
+      kafka:
+        binder:
+          #Internal IP Pod Kafka broker
+          brokers: kafka-service
+          #Internal Port 
+          defaultBrokerPort: 9092
+          #Internal IP Pod Zookeeper broker
+          zkNodes: zookeeper-service
+          #Internal Port
+          defaultZkPort: 2181
+#          brokers: kafka
+#          defaultBrokerPort: 9092
+
+      bindings:
+        output:
+            destination:  boardingCardTopic
+            content-type: application/json
+      
+
+#Setting the logging levels for the service
+logging:
+  level:
+    com.netflix: WARN
+    org.springframework.web: WARN
+    com.thoughtmechanix: DEBUG      
